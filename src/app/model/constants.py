@@ -1,3 +1,0 @@
-EXEC = 0
-STCK = 1
-ERR = 3

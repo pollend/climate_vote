@@ -1,18 +1,9 @@
-# tis100pad
-
-[![Stories in Ready](https://badge.waffle.io/pollend/tis100pad.svg?label=ready&title=Ready)](http://waffle.io/pollend/tis100pad)
-
-A web site for uploading and sharing solutions for the game TIS-100. http://www.tis100pad.com
+# Chapman Robotics Website
 
 ##Feature
 ###Current
-* A user account system
-* Anonmous user or registerd user can submit solution
-* Registered user can submit problems
-* Both solutions and problems can be reviewied by Anonmous/Registed users and resaved as seperate entries
 
 ###Planned
-* Solution Validation
 
 ##Installing
 
@@ -101,13 +92,9 @@ more information can be found here: http://docs.sqlalchemy.org/en/latest/core/en
 
 ```
 npm install
-bower install
-grunt build
-grunt migrate
+gulp build
 ```
-run these four commands in the root directory of the project to install all the necessary npm modules, installing bowers source files, building src files and setup the database and migrate to the current version of the project.
-
-between each pull from source `grunt migrate` is needed to upgrade the current database to reflect the current release
+gulp build is used to copy over and build the necessary static content for the website
 
 ####Site Configuration
 
@@ -118,16 +105,29 @@ more information about deployment can be found here: http://docs.gunicorn.org/en
 ##Modifying
 
 ```
-grunt wtch
+gulp run
+gulp run-shell
 ```
 
-grunt will watch the src directory for any changes and rebuild the the project accordingly. Flask will restart with any changes to to the base server files but may occasionally crash with syntax errors.
+gulp run will start website and output the information.
+
+gulp-shell will start the website but allow for shell commands to be input into the server.
+
 
 ```
-grunt clean-up-bin
+gulp watch
 ```
 
-This command will clear the bin directory
+gulp watch will watch for changes in the associated resource folder and
+update the changes to the website. This will also kickstart a local instance
+of the website. This should make it easy to modify the site and refresh the associated pages to see
+the updated changes.
+
+Note: you may have to disable browser caching. 
+
+For chrome and firefox, F12 is used to open the developer console. under Network in chrome there should be a checkbox to disable
+the cache.
+
 
 #Licence
 MIT

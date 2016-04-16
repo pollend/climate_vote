@@ -20,7 +20,9 @@ db = SQLAlchemy(app)
 
 @app.errorhandler(404)
 def not_found(error):
-	return render_template('404.html'), 404
+ # route everything back to the index.html
+ # Angular 2 will then resolve the 404 error not in the route
+ return render_template('index.html'), 404
 
 @app.context_processor
 def inject_recaptcha():
@@ -33,20 +35,9 @@ def static_proxy(path):
 
 @app.context_processor
 def inject_user():
-    return dict(googleTrackingCode=app.config["GOOGLE_ANALYTICS_CODE"])
-
-from app.views.solutionSubmitService import mod as solutionSubmitModule
-app.register_blueprint(solutionSubmitModule)
-
-from app.views.problemSubmitService import mod as problemSubmitModule
-app.register_blueprint(problemSubmitModule)
+ return dict(googleTrackingCode=app.config["GOOGLE_ANALYTICS_CODE"])
 
 
-from app.views.problemService import mod as problemModule
-app.register_blueprint(problemModule)
-
-from app.views.accountService import mod as accountModule
-app.register_blueprint(accountModule)
-
-from app.views.userService import mod as userModule
-app.register_blueprint(userModule)
+# this is s sample of what a module will look like
+# from app.views.solutionSubmitService import mod as solutionSubmitModule
+# app.register_blueprint(solutionSubmitModule)

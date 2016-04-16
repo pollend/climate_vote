@@ -6,6 +6,8 @@
 *log
 /min/*
 
+/src/app/static/*
+
 bin/*
 node_modules/*
 bower_components/*
