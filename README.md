@@ -19,7 +19,7 @@ Python
 npm libraries
 
 ```
-npm install -g grunt-cli
+npm install -g gulp-cli
 npm install -g bower
 ```
 
@@ -31,8 +31,7 @@ pip install flask-sqlalchemy
 pip install Flask-KVSession
 pip install Redis
 pip install requests
-pip install lupa
-pip install psutil
+pip install psutil <-- unused
 pip install alembic
 ```
 
