@@ -25,7 +25,6 @@ gulp.task('typescript', function () {
 // move templates from resource to the output directory
 gulp.task('templates', function() {
     return gulp.src('resource/templates/**/*.html')
-        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('src/app/static/templates'))
 });
 
