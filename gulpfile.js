@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var ts = require('gulp-typescript');
-var htmlmin = require('gulp-htmlmin');
 var shell = require('gulp-shell');
 var  watch = require('gulp-watch');
 var batch = require('gulp-batch');
