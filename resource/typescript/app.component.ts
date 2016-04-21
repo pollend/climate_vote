@@ -39,6 +39,17 @@ import {RoverComponent} from './rover.component';
 ])
 
 export class AppComponent { 
-
+	
+  //expand with mobile application mode
+  expand()
+  {
+    $(".navigation nav").each(function(index)
+    {
+      if($(this).hasClass("show"))
+        $(this).removeClass("show");
+      else
+        $(this).addClass("show");
+    });
+  }
 }
 

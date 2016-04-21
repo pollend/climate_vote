@@ -29,7 +29,7 @@ gulp.task('templates', function() {
 
 //builds the sass for the project
 gulp.task('sass', function () {
-    return gulp.src('resource/sass/**/*.scss')
+    return gulp.src('resource/sass/app.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('src/app/static/css'));
 });
@@ -57,8 +57,9 @@ gulp.task('run-shell',['build'],shell.task(['python src/shell.py']));
 
 // watches source directory for changes and updates the associated files
 gulp.task('watch',function(){
-    gulp.start('lib');
-    gulp.start('run');
+    gulp.start('build');
+    // just run in a separate terminal
+    // gulp.start('run');
     
     watch('resource/typescript/**/*.ts', batch(function (events, done) {
         gulp.start('typescript', done);
