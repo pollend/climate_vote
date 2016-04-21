@@ -44,6 +44,8 @@ gulp.task('lib', function() {
     gulp.src('node_modules/es6-shim/**/*').pipe(gulp.dest('src/app/static/es6-shim'));
     gulp.src('node_modules/zone.js/**/*').pipe(gulp.dest('src/app/static/zone.js'));
     gulp.src('node_modules/jquery/dist/**/*').pipe(gulp.dest('src/app/static/jquery'));
+    gulp.src('node_modules/bootstrap-sass/assets/fonts/bootstrap/**/*').pipe(gulp.dest('src/app/static/bootstrap'));
+    gulp.src('node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js').pipe(gulp.dest('src/app/static/bootstrap/'));
 });
 
 // builds the static files
