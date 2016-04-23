@@ -117,8 +117,7 @@ gulp watch
 ```
 
 gulp watch will watch for changes in the associated resource folder and
-update the changes to the website. This will also kickstart a local instance
-of the website. This should make it easy to modify the site and refresh the associated pages to see
+update the changes to the website. This should make it easy to modify the site and refresh the associated pages to see
 the updated changes.
 
 Note: you may have to disable browser caching. 
