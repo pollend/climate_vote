@@ -21,7 +21,11 @@ $large-screen: em(860) !default;
 // @import "./lib/header";
 
 @import "./lib/member-list";
+@import "./lib/header";
 .centered{
-	margin: 0px auto ;
-	width:500px;
+	
+	@include media($large-screen) {
+		@include shift(2);
+	      @include span-columns(8);
+	}
 }
