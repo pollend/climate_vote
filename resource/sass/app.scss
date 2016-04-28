@@ -6,8 +6,8 @@
 // bourbon and Neat. better grid system then bootstrap
 // comes with helper functions for gradients
 // http://bourbon.io/
-@import "./../../node_modules/bourbon/app/assets/stylesheets/bourbon";
-@import "./../../node_modules/bourbon-neat/app/assets/stylesheets/neat";
+ @import "./../../node_modules/bourbon/app/assets/stylesheets/bourbon";
+ @import "./../../node_modules/bourbon-neat/app/assets/stylesheets/neat";
 
 // base colors for the whole site
 $base-color: gainsboro !default;
@@ -17,5 +17,11 @@ $base-font-color: #333 !default;
 $base-border-radius: 3px !default;
 $large-screen: em(860) !default;
 
-// lib dependencies are included and not compiled to the output folder
-@import "./lib/header";
+// // lib dependencies are included and not compiled to the output folder
+// @import "./lib/header";
+
+@import "./lib/member-list";
+.centered{
+	margin: 0px auto ;
+	width:500px;
+}

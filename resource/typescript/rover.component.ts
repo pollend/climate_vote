@@ -2,9 +2,7 @@ import {Component} from 'angular2/core';
 
 @Component({
     selector: 'rover-component',
-    template: `
-    Rover
-    `
+    templateUrl: 'templates/rover.component.html',
 })
 
 export class RoverComponent { }

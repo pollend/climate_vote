@@ -2,9 +2,8 @@ import {Component} from 'angular2/core';
 
 @Component({
     selector: 'members-component',
-    template: `
-    Members
-    `
+    templateUrl: 'templates/member.component.html',
+
 })
 
 export class MembersComponent { }
