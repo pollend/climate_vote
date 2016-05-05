@@ -14,6 +14,7 @@ store = RedisStore(redis.StrictRedis())
 
 app = Flask(__name__)
 KVSessionExtension(store, app)
+socketio.run(app)
 
 app.config.from_object('config')
 
