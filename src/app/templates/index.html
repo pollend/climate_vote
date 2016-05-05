@@ -27,10 +27,15 @@
             System.config({
               "defaultJSExtensions": true,
               packages: {
+                rxjs: { defaultExtension: 'js' },
                 app: {
                   format: 'register',
                   defaultExtension: 'js'
                 }
+              },
+              map: {
+                'angular2': 'angular2',
+                'rxjs': 'rxjs'
               }
             });
             System.import('typescript/boot')
