@@ -1,15 +1,36 @@
-*.txt
+#python
 *.db
-*.pyc
-*.sh
 *.wsgi
 *log
 /min/*
+*.py[cod]
 
-/src/app/static/*
+# C extensions
+*.so
 
-bin/*
-node_modules/*
-bower_components/*
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+node_modules
+bower_components
+include
 
+# Installer logs
+pip-log.txt
+pip-selfcheck.json
+
+#static
+src/app/static/*
 config.py

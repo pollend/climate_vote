@@ -8,6 +8,8 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask_kvsession import KVSessionExtension
 from simplekv.memory.redisstore import RedisStore
 
+from flask.ext.socketio import SocketIO, emit
+
 store = RedisStore(redis.StrictRedis())
 
 app = Flask(__name__)
@@ -16,6 +18,7 @@ KVSessionExtension(store, app)
 app.config.from_object('config')
 
 db = SQLAlchemy(app)
+socketio = SocketIO(app)
 
 
 @app.errorhandler(404)

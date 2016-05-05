@@ -49,6 +49,7 @@ export class AppComponent {
         $(this).removeClass("show");
       else
         $(this).addClass("show");
+
     });
   }
 }

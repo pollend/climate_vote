@@ -36,6 +36,7 @@ gulp.task('sass', function () {
 
 // copy library dependencies 
 gulp.task('lib', function() {
+    gulp.src('node_modules/socket.io-client/**/*').pipe(gulp.dest('src/app/static/socket.io-client'));
     gulp.src('node_modules/angular2/**/*').pipe(gulp.dest('src/app/static/angular2'));
     gulp.src('node_modules/rxjs/**/*').pipe(gulp.dest('src/app/static/rxjs'));
     gulp.src('node_modules/systemjs/**/*').pipe(gulp.dest('src/app/static/systemjs'));
