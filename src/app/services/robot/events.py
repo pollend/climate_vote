@@ -5,6 +5,7 @@ from app.model.problem import Problem
 from app import app
 from app import socketio
 import requests
+import Queue
 
 from app.model.account import Account
 
@@ -14,10 +15,23 @@ import string
 import math
 import datetime
 
+users = []
+active_user = -1;
+
+def send_updated_player_list()
+ out =[]
+ for key, value in users.iteritems():
+  out.append(value)
+ emit("client_list",jsonify(out),namespace='/robot')
+
 @socketio.on('connect', namespace='/robot')
-def test_connect():
-    emit('my response', {'data': 'Connected'})
+def connect():
+ users[requests.sid] = "temp"
+ send_updated_player_list()
+ emit('my response', {'data': 'Connected'})
 
 @socketio.on('disconnect', namespace='/robot')
-def test_disconnect():
-    print('Client disconnected')
+def disconnect():
+ users.remove(requests.sid)
+ send_updated_player_list()
+ print('Client disconnected')

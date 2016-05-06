@@ -5,6 +5,8 @@ import {HomeComponent} from './home.component';
 import {MembersComponent} from './members.component';
 import {ContactsComponent} from './contacts.component';
 import {RoverComponent} from './rover.component';
+import {RoverControlComponent} from './rover_control.component';
+
 
 @Component({
     selector: 'my-app',
@@ -35,6 +37,11 @@ import {RoverComponent} from './rover.component';
 		path: "/Rover",
 		name: "Rover",
 		component: RoverComponent
+	},
+	{
+		path:"/RoverControl",
+		name:"RoverControl",
+		component : RoverControlComponent
 	}
 ])
 

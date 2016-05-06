@@ -19,7 +19,6 @@ app.config.from_object('config')
 
 db = SQLAlchemy(app)
 socketio = SocketIO(app)
-socketio.run(app)
 
 
 @app.errorhandler(404)
@@ -46,4 +45,5 @@ def inject_user():
 # from app.views.solutionSubmitService import mod as solutionSubmitModule
 # app.register_blueprint(solutionSubmitModule)
 
-import app.views.robotControlService 
+# from .services.robot import main as robot_service
+# app.register_blueprint(robot_service)
