@@ -14,12 +14,12 @@ store = RedisStore(redis.StrictRedis())
 
 app = Flask(__name__)
 KVSessionExtension(store, app)
-socketio.run(app)
 
 app.config.from_object('config')
 
 db = SQLAlchemy(app)
 socketio = SocketIO(app)
+socketio.run(app)
 
 
 @app.errorhandler(404)
@@ -45,3 +45,5 @@ def inject_user():
 # this is s sample of what a module will look like
 # from app.views.solutionSubmitService import mod as solutionSubmitModule
 # app.register_blueprint(solutionSubmitModule)
+
+import app.views.robotControlService 
