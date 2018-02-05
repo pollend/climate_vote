@@ -1,0 +1,6 @@
+{
+  "presets": ["env"],
+  "plugins": ["transform-vue-jsx",
+    "babel-plugin-transform-class-properties",
+    "babel-plugin-transform-flow-strip-types"]
+}
