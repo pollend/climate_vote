@@ -24,12 +24,8 @@ module.exports = [{
                 exclude: ['/node_modules/']
             },
             {
-                  test: /\.css/,
-                loader: ExtractTextPlugin.extract({ loader: 'css-loader!resolve-url-loader?sourceMap=true'})
-            },
-            {
                 test: /\.scss/,
-                loader: ExtractTextPlugin.extract({ loader: 'css-loader!resolve-url-loader!sass-loader?sourceMap=true'})
+                use: ExtractTextPlugin.extract(['css-loader','resolve-url-loader','sass-loader?sourceMap=true'])
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
