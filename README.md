@@ -1,13 +1,13 @@
-# Chapman Robotics Website
+# Climate Vote
 
-##Feature
-###Current
+## Feature
+### Current
 
-###Planned
+### Planned
 
-##Installing
+## Installing
 
-###Required Libraries
+### Required Libraries
 
 system libraries
 
