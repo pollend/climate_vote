@@ -23,10 +23,18 @@
                           </div>
                         </div>
                     </div>
+
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-8">
+                            <h6><b>Unrelated</b>: Some what affiliated  with environmental/earth science /climate</h6>
+                            <h6><b>Neither</b>: No affiliation with environmental/earth science/climate</h6>
+                            <h6><b>Related</b>: affiliated with environmental/earth science/climate</h6>
+                        </div>
+                    </div>
                     <div class="row justify-content-md-center">
                         <div class="col-md-8">
                             <label>Is this related to climate?</label>
-                            <b-form-slider id="range-climate" v-model="score" tooltip="always" :min="-1" :max="1" :step=".1"  :ticks="[-1,0,1]" :ticksPositions="[0,50,100]" :ticksLabels="['Un-Releated','Neither','Related']" :ticksSnapBounds="0"></b-form-slider>
+                            <b-form-slider id="range-climate" v-model="score" tooltip="always" :min="-1" :max="1" :step=".01"  :ticks="[-1,0,1]" :ticksPositions="[0,50,100]" :ticksLabels="['Unrelated','Neither','Related']" :ticksSnapBounds="0"></b-form-slider>
                         </div>
                     </div>
                      <div class="row">
